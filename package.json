@@ -1,0 +1,47 @@
+{
+  "name": "health-care",
+  "version": "1.0.0",
+  "description": "Health Care Website",
+  "main": "src/server.js",
+  "scripts": {
+    "kill": "pm2 kill",
+    "prod": "pm2 start ecosystem.config.json",
+    "start": "nodemon --experimental-specifier-resolution=node src/server.js",
+    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "prettier": "prettier --check **/*.js",
+    "prettier:fix": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "type": "module",
+  "author": "Mahmoud Yasser",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.5.0",
+    "joi": "^17.4.0",
+    "morgan": "^1.10.0",
+    "pm2": "^4.5.6",
+    "winston": "^3.3.3",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^32.3.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}

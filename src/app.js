@@ -6,12 +6,14 @@ import xss from 'xss-clean';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import ejs from 'ejs';
 
 import config from './config/config.js';
 import { successHandle, errorHandle } from './config/morgan.js';
 import limiter from './middlewares/rateLimiter.js';
 import errorHandler from './utils/errorHandler.js';
 import AppError from './utils/appError.js';
+import routes from './routes/index';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -31,6 +33,10 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+// View engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 // Set Cookie parser
 app.use(cookieParser());

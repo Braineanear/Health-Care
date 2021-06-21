@@ -3,8 +3,12 @@
     "node": true,
     "es6": true
   },
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "requireConfigFile": false
   },
   "extends": ["airbnb", "prettier", "eslint:recommended"],
   "plugins": ["prettier"],
@@ -15,6 +19,16 @@
         "endOfLine": "auto"
       }
     ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
     "spaced-comment": "off",
     "no-console": "error",
     "consistent-return": "off",
@@ -26,6 +40,10 @@
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
+    "one-var-declaration-per-line": "off",
+    "one-var": "off",
+    "prefer-const": "off",
+    "no-restricted-syntax": "off"
   }
 }

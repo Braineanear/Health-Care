@@ -1,6 +1,6 @@
 import express from 'express';
 
-import pages from './pages.route.js';
+import pages from './pages.route';
 
 const router = express.Router();
 

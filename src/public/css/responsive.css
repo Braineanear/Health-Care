@@ -43,6 +43,10 @@
     padding: 0 0;
   }
 
+  .header__menu ul li ul.submenu {
+    width: 215px;
+  }
+
   .about-title h1 {
     font-size: 45px;
   }

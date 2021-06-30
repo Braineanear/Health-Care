@@ -404,7 +404,8 @@ label {
 }
 
 .about-right-side {
-	padding-left: 23px;
+	padding-left: 50px;
+	z-index: 100;
 }
 
 .author-ava {
@@ -465,12 +466,13 @@ label {
 }
 
 /* Company */
-.compaines-area{
+.companies-area{
   display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-bottom: 50px;
 }
 
 .companies-header {
@@ -497,7 +499,7 @@ label {
   display: flex;
   align-items: flex-end;
   transition: 0.4s ease-out;
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.5);
 }
 .company:hover {
   transform: translateY(20px);
@@ -824,6 +826,13 @@ label {
 }
 
 /* Counter */
+.single-couter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 .single-couter h1 {
 	font-size: 80px;
 	color: #e12454;
@@ -850,7 +859,6 @@ label {
 
 .single-couter p {
 	margin-bottom: 0;
-	padding-right: 40px;
 }
 
 .counter-text p {

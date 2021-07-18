@@ -520,6 +520,7 @@ label {
 
 .about-text p {
 	padding-right: 46px;
+	text-align: justify;
 }
 
 .about-logo {
@@ -715,7 +716,7 @@ label {
 }
 
 .service-content p {
-	padding-right: 30px;
+	text-align:justify;
 }
 
 .service-box {

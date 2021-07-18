@@ -10,24 +10,20 @@
               </div>
               <div class="emmergency-call-text f-left">
                 <h6> Phone</h6>
-                <span>202-555-0104</span>
+                <span>+1 512 861 9249</span>
               </div>
             </div>
             <div class="footer-logo mb-35">
               <a href="">
-                <img src="img/logo.png" alt="Logo">
+                <img src="/img/logo.png" alt="Logo">
               </a>
             </div>
             <div class="footer-contact-content mb-25">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-              </p>
+              <p>Wisemed inc is a manufacturing of animal nutritional and health products.</p>
             </div>
             <div class="footer-emailing">
               <ul>
                 <li><i class="icofont-envelope"></i><a href="#""> info@example.com</a></li>
-                <li><i class="icofont-ui-email"></i> example.com</li>
                 <li><i class="icofont-location-pin"></i> 227 Marion Street, USA</li>
               </ul>
             </div>
@@ -40,12 +36,9 @@
             </div>
             <div class="footer-menu">
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Companies</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Policy</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#Company">Companies</a></li>
+                <li><a href="#About">About</a></li>
               </ul>
             </div>
           </div>
@@ -57,11 +50,9 @@
             </div>
             <div class="footer-menu">
               <ul>
-                <li><a href="#">Company1</a></li>
-                <li><a href="#">Company2</a></li>
-                <li><a href="#">Company3</a></li>
-                <li><a href="#">Company4</a></li>
-                <li><a href="#">Company5</a></li>
+                <%companyData.forEach(function(company){%>
+                  <li><a href="<%=company.link%>"><%=company.name%></a></li>
+                <%})%>
               </ul>
             </div>
           </div>

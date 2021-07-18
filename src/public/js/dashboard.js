@@ -61,13 +61,7 @@ $(document).ready(() => {
 
   $('#logout').click(async (e) => {
     e.preventDefault();
-    const res = await axios.post('/logout');
-    new Noty({
-      type: 'success',
-      timeout: 1000,
-      text: res.data.message,
-      progressBar: false
-    }).show();
+    await axios.post('/logout');
     setTimeout(() => {
       window.location.href = '/';
     }, 1000);

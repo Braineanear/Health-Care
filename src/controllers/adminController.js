@@ -1,12 +1,19 @@
 const catchAsync = require('../utils/catchAsync');
 const Company = require('../models/companyModel');
+const Product = require('../models/productModel');
 
 exports.dashboard = catchAsync(async (req, res) => {
-  const data = await Company.find();
+  const compaines = await Company.find();
+  const products = await Product.find();
 
-  const totalCompanies = data.length;
+  const totalCompanies = compaines.length;
+  const totalProducts = products.length;
 
-  res.render('admin/dashboard', { title: 'Dashboard', totalCompanies });
+  res.render('admin/dashboard', {
+    title: 'Dashboard',
+    totalCompanies,
+    totalProducts
+  });
 });
 
 exports.company = (req, res) =>

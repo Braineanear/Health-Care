@@ -586,8 +586,8 @@ label {
 }
 
 .company {
-  width: 30%;
-  height: 400px;
+  width: 24%;
+  height: 350px;
 	margin: 15px;
   border-radius: 15px;
   padding: 1.5rem;
@@ -625,7 +625,6 @@ label {
 .company img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -1712,7 +1711,7 @@ label {
 }
 
 .productImage img {
-	height: 100vh;
+	height: 130vh;
 	width: 100%;
 }
 

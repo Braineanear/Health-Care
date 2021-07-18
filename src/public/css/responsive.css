@@ -228,8 +228,7 @@
   }
 
   .about-right-side {
-    padding-left: 0;
-    padding-top: 20px;
+    padding: 20px;
   }
 
   .company {
@@ -391,8 +390,7 @@
   }
 
   .about-right-side {
-    padding-left: 0;
-    padding-top: 0;
+    padding: 0 20px;
   }
 
   .about-title h1 {
@@ -639,6 +637,9 @@
     display: block;
     width: 100%;
     margin-bottom: 20px;
+  }
+  .productImage img{
+    height: 60vh;
   }
 }
 

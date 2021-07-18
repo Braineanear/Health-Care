@@ -40,7 +40,7 @@
 
           <div class="col-xl-4 col-lg-6 col-md-4">
             <div class="header-top-right-btn f-right">
-              <a href="/wp/medidove/contact/" class="btn">Contact Us</a>
+              <a href="/contact" class="btn">Contact Us</a>
             </div>
           </div>
         </div>
@@ -82,11 +82,17 @@
                   <li><a href="/#About">About</a></li>
                   <li><a href="#">Products +</a>
                     <ul class="submenu">
-                        <li><a href="/products">tri-v</a></li>
+                      <%companyData.forEach(function(company){%>
+                      <%if(company.type == 'page') {%>
+                      <li><a href="<%=company.link%>"><%=company.name%></a></li>
+                      <%}%>
+                      <%})%>
                     </ul>
-                </li>
-                  <li><a href="/">Policy</a></li>
+                  </li>
                   <li><a href="/contact">Contact</a></li>
+                  <% if(user) { %>
+                  <li><a href="/dashboard">Dashboard</a></li>
+                  <% } %>
                 </ul>
               </nav>
             </div>

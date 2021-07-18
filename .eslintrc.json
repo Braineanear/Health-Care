@@ -1,36 +1,24 @@
 {
-  "env": {
-    "node": true,
-    "es6": true
-  },
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "allowImportExportEverywhere": true,
-    "requireConfigFile": false
-  },
-  "extends": ["airbnb", "prettier", "eslint:recommended"],
+  "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
+  "globals": {
+    "window": true,
+    "document": true,
+    "Noty": true,
+    "FormData": true,
+    "axios": true,
+    "$": true,
+    "AOS": true
+  },
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-   ],
+    "import/no-named-as-default": 0,
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "prettier/prettier": ["error",{
+      "endOfLine":"auto"
+    }],
     "spaced-comment": "off",
-    "no-console": "error",
+    "no-console": "off",
     "consistent-return": "off",
     "func-names": "off",
     "object-shorthand": "off",
@@ -40,10 +28,6 @@
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
-    "one-var-declaration-per-line": "off",
-    "one-var": "off",
-    "prefer-const": "off",
-    "no-restricted-syntax": "off"
+    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
   }
 }

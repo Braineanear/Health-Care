@@ -1,7 +1,7 @@
 <%- include ('layout/header') -%>
 
 <!-- hero-area start -->
-<section class="breadcrumb-bg pt-200 pb-180" data-background="img/page/page-bg.jpg">
+<section class="breadcrumb-bg pt-200 pb-180" data-background="../../img/page/page-bg.jpg">
   <div class="container">
     <div class="row">
       <div class="col-lg-9 col-md-9">
@@ -19,126 +19,20 @@
 <section class="shop-banner-area pt-120 pb-90">
   <div class="container">
     <div class="row">
-      <div class="col-xl-7">
-        <div class="shop-thumb-tab mb-30">
-          <ul class="nav" id="myTab2" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                aria-selected="true"><img src="img/products/airbreez.jpg" alt=""> </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                aria-selected="false"><img src="img/products/airbreez.jpg" alt=""></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile1" role="tab"
-                aria-selected="false"><img src="img/products/airbreez.jpg" alt=""></a>
-            </li>
-          </ul>
-        </div>
-        <div class="product-details-img mb-30">
-          <div class="tab-content" id="myTabContent2">
-            <div class="tab-pane fade show active" id="home" role="tabpanel">
-              <div class="product-large-img">
-                <img src="img/products/airbreez.jpg" alt="">
-              </div>
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel">
-              <div class="product-large-img">
-                <img src="img/products/airbreez.jpg" alt="">
-              </div>
-            </div>
-            <div class="tab-pane fade" id="profile1" role="tabpanel">
-              <div class="product-large-img">
-                <img src="img/products/airbreez.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-5">
-        <div class="product-details mb-30">
+      <div class="col-xl-12">
+        <div class="product-details">
           <div class="product-details-title">
-            <p>Airbreez</p>
-            <h1>Air freshener and disinfectant</h1>
-            <div class="price details-price pb-30 mb-20">
-              <span>$700.00</span>
-              <span class="old-price">$820.00</span>
-            </div>
+            <h1><%=productData.name%></h1>
           </div>
-          <p>Airbreez Room Spray helps maintain a welcoming bathroom or any other room by awakening the air with eucalyptus and mint  fragrance and eco disinfectant.</p>
-          <div class="product-cat mt-30 mb-30">
-            <span>Category: </span>
-            <a href="#">tri-v</a>
-          </div>
-          <div class="product-social mb-45">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
+        </div>
+        <div class="productImage mb-30">
+          <img src="<%=productData.secondImage%>" alt="<%=productData.name%>">
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- shop-banner-area end -->
-<!-- product-desc-area start -->
-<section class="product-desc-area pb-80">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="bakix-details-tab">
-          <ul class="nav text-center justify-content-center pb-30 mb-50" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#id-desc" role="tab" aria-controls="home"
-                aria-selected="true">Description </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="id-add-in" data-toggle="tab" href="#id-add" role="tab" aria-controls="profile"
-                aria-selected="false">Additional Information</a>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="id-desc" role="tabpanel" aria-labelledby="desc-tab">
-            <div class="event-text mb-40">
-              <ul>
-                <li>Airbreez Room Spray helps maintain a welcoming bathroom or any other room by awakening the air with eucalyptus and mint  fragrance and eco disinfectant.</li>
-                <li>Designed to fight tough odors and some germs , each burst instantly freshens, so you know your space is always inviting.</li>
-                <li>Use on a daily basis or as the final touch after the cleaning routine.</li>
-                <li>Use airbreez for your home and have the perfect freshness at your fingertips.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="id-add" role="tabpanel" aria-labelledby="id-add-in">
-            <div class="additional-info">
-              <div class="table-responsive">
-                <h4>Additional information</h4>
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th>Weight</th>
-                      <td class="product_weight">1.4 oz</td>
-                    </tr>
-                    <tr>
-                      <th>Dimensions</th>
-                      <td class="product_dimensions">62 × 56 × 12 in</td>
-                    </tr>
-                    <tr>
-                      <th>Size</th>
-                      <td class="product_dimensions">XL, XXL, LG, SM, MD</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <!-- product-desc-area end -->
 <%- include ('layout/footer') -%>

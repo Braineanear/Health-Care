@@ -582,10 +582,11 @@ label {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 .company {
-  width: 25%;
+  width: 30%;
   height: 400px;
 	margin: 15px;
   border-radius: 15px;
@@ -704,6 +705,10 @@ label {
 /* Services */
 .service-thumb {
 	margin-bottom: 45px;
+}
+
+.service-thumb i {
+	font-size: 60px;
 }
 
 .service-content h3 {
@@ -1704,6 +1709,11 @@ label {
   .product-details-img {
     margin-left: 0;
   }
+}
+
+.productImage img {
+	height: 100vh;
+	width: 100%;
 }
 
 .product-details-title p {

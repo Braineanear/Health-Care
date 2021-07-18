@@ -1,5 +1,15 @@
-import AppError from './appError';
-import logger from '../config/logger';
+const AppError = require('../utils/appError.js');
+const ErrorStack = require('../models/errorModel.js');
+
+const saveError = async (err) => {
+  const newError = await ErrorStack.create({
+    status: err.status,
+    error: err,
+    message: err.message,
+    stack: err.stack
+  });
+  return newError.id;
+};
 
 // @desc    Function That Handles Invalid JWT Tokens (UNAUTHORIZED)
 const handleJWTError = () =>
@@ -17,8 +27,8 @@ const handleCastErrorDB = (err) => {
 
 // @desc    Function That Handles MongoDB Duplication Errors (BAD_REQUEST)
 const handleDuplicateFieldsDB = (err) => {
-  const dupField = Object.keys(err.keyValue)[0];
-  const message = `Duplicate field(${dupField}). Please use another value(${err.keyValue[dupField]})!`;
+  const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
+  const message = `Duplicate field value: ${value}. Please use another value!`;
   return new AppError(message, 400);
 };
 
@@ -30,35 +40,39 @@ const handleValidationErrorDB = (err) => {
 };
 
 // @desc    Function That Shows Details About The Error Only on The Development Phase
-const sendErrorDev = async (err, req, res) =>
-  res.status(err.statusCode).json({
+const sendErrorDev = async (err, req, res) => {
+  const errorId = await saveError(err);
+  return res.status(err.statusCode).json({
     status: err.status,
     error: err,
-    message: `${err.message}`,
+    message: `${err.message} (${errorId})`,
     stack: err.stack
   });
+};
 
 // @desc    Function That Shows Little Info About The Error Only on The Production Phase
 const sendErrorProd = async (err, req, res) => {
   // A) Operational, trusted error: send message to client
   if (err.isOperational) {
+    const errorId = await saveError(err);
     return res.status(err.statusCode).json({
       status: err.status,
-      message: `${err.message}`
+      message: `${err.message} (${errorId})`
     });
   }
 
   // B) Programming or other unknown error: don't leak error details
   // 1) Log error
-  logger.error('ERROR 💥', err);
+  console.error('ERROR 💥', err);
   // 2) Send generic message
+  const errorId = await saveError(err);
   return res.status(500).json({
     status: 'error',
-    message: `Something went wrong!`
+    message: `Something went wrong! (${errorId})`
   });
 };
 
-export default (err, req, res, next) => {
+module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.status = err.status || 'error';
 

@@ -1,0 +1,36 @@
+<div class="col-12">
+  <!-- ########## START: FOOTER ########## -->
+  <footer class="br-footer">
+    <div class="footer-left">
+      <div class="mg-b-2">Copyright &copy; 2021. Brainean. All Rights Reserved.</div>
+      <div>Attentively and carefully made with <i class="icofont-heart-alt"></i>.</div>
+    </div>
+    <div class="footer-right d-flex align-items-center">
+      <span class="tx-uppercase mg-r-10">Visit US</span>
+      <a target="_blank" class="pd-x-5" href="https://www.facebook.com/MahmoudYasserMLE"><i
+          class="icofont-facebook tx-20"></i></a>
+      <a target="_blank" class="pd-x-5" href="https://twitter.com/Mahmoud03203227"><i
+          class="icofont-twitter tx-20"></i></a>
+    </div>
+  </footer>
+  <!-- ########## END: FOOTER ########## -->
+</div>
+</div>
+<!-- ########## END: MAIN PANEL ########## -->
+
+<!-- Vendor JavaScript Files -->
+<script src="/vendor/jquery/jquery-1.12.4.min.js"></script>
+<script src="/vendor/popper/popper.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/vendor/noty/noty.min.js"></script>
+<script src="/vendor/axios/axios.js"></script>
+
+<!-- Main JavaScript File -->
+<script src="../js/dashboard.js"></script>
+<%if (title == "Company") {%>
+<script src="../js/company.js"></script>
+<%} else if (title == "Product") {%>
+<script src="../js/product.js"></script>
+<%}%>
+</body>
+</html>

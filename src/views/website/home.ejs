@@ -26,38 +26,16 @@
         </div>
         <div class="row">
             <div class="compaines">
+                <%companyData.forEach(function(company) {%>
                 <div class="company">
-                    <img src="img/company/company1.jpg" alt="Company" />
+                    <img src="<%=company.image%>" alt="<%=company.name%>" />
                     <div class="company-info">
-                        <h1>Company 1</h1>
-                        <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-                        <a href="/products">Visit Us</a>
+                        <h1><%=company.name%></h1>
+                        <p><%=company.description%></p>
+                        <a href="<%=company.link%>">Visit Us</a>
                     </div>
                 </div>
-                <div class="company">
-                    <img src="img/company/company1.jpg" alt="Company" />
-                    <div class="company-info">
-                        <h1>Company 1</h1>
-                        <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-                        <a href="/products">Visit Us</a>
-                    </div>
-                </div>
-                <div class="company">
-                    <img src="img/company/company2.jpg" alt="Company" />
-                    <div class="company-info">
-                        <h1>Company 2</h1>
-                        <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-                        <a href="/products">Visit Us</a>
-                    </div>
-                </div>
-                <div class="company">
-                    <img src="img/company/company3.jpg" alt="Company" />
-                    <div class="company-info">
-                        <h1>Company 3</h1>
-                        <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-                        <a href="/products">Visit Us</a>
-                    </div>
-                </div>
+                <%})%>
             </div>
         </div>
     </div>
@@ -118,73 +96,14 @@
 </section>
 <!-- about-area end -->
 
-<!-- Counter Section Satrt -->
-<section class="counter-wraper pt-120 pb-90 gray-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-couter mb-30">
-                    <img src="img/counter/counter-icon-1.png" alt="Counter">
-                    <div class="counter-text-box">
-                        <h1><span class="counter">358</span>+</h1>
-                        <h3>Counter 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-couter mb-30">
-                    <img src="img/counter/counter-icon-2.png" alt="Counter">
-                    <div class="counter-text-box">
-                        <h1><span class="counter">358</span>+</h1>
-                        <h3>Counter 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-couter mb-30">
-                    <img src="img/counter/counter-icon-3.png" alt="Counter">
-                    <div class="counter-text-box">
-                        <h1><span class="counter">238</span>+</h1>
-                        <h3>Counter 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Counter Section end -->
-
-
 <!-- services-area start -->
-<section class="servcies-area gray-bg pt-115 pb-90">
+<section class="servcies-area gray-bg">
     <div class="container">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                <div class="section-title text-center pos-rel mb-75">
-                    <div class="section-icon">
-                        <img class="section-back-icon" src="img/section-back-icon.png" alt="Icon">
-                    </div>
-                    <div class="section-text pos-rel">
-                        <h5>Services</h5>
-                        <h1>Managed Your Heathcare Services</h1>
-                    </div>
-                    <div class="section-line pos-rel">
-                        <img src="img/section-title-line.png" alt="Line">
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="service-box text-center mb-30">
                     <div class="service-thumb">
-                        <img src="img/services/service1.png" alt="Service">
+                        <i class="icofont-license"></i>
                     </div>
                     <div class="service-content">
                         <h3><a href="#">Service 1</a></h3>
@@ -197,7 +116,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="service-box text-center mb-30">
                     <div class="service-thumb">
-                        <img src="img/services/service2.png" alt="Service">
+                        <i class="icofont-info"></i>
                     </div>
                     <div class="service-content">
                         <h3><a href="#">Service 2</a></h3>
@@ -210,49 +129,10 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="service-box text-center mb-30">
                     <div class="service-thumb">
-                        <img src="img/services/service3.png" alt="Service">
+                        <i class="icofont-safety"></i>
                     </div>
                     <div class="service-content">
                         <h3><a href="#">Service 3</a></h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo.</p>
-                        <a class="service-link" href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-box text-center mb-30">
-                    <div class="service-thumb">
-                        <img src="img/services/service4.png" alt="Service">
-                    </div>
-                    <div class="service-content">
-                        <h3><a href="#">Service 4</a></h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo.</p>
-                        <a class="service-link" href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-box text-center mb-30">
-                    <div class="service-thumb">
-                        <img src="img/services/service5.png" alt="Service">
-                    </div>
-                    <div class="service-content">
-                        <h3><a href="#">Service 5</a></h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo.</p>
-                        <a class="service-link" href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="service-box text-center mb-30">
-                    <div class="service-thumb">
-                        <img src="img/services/service6.png" alt="Service">
-                    </div>
-                    <div class="service-content">
-                        <h3><a href="#">Service 6</a></h3>
                         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                             commodo.</p>
                         <a class="service-link" href="#">Read More</a>

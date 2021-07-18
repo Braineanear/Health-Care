@@ -1,0 +1,70 @@
+<%- include ('layout/header') -%>
+
+<!-- ########## START: MAIN PANEL ########## -->
+<div class="br-mainpanel">
+  <!-- ########## START: CONTENT ########## -->
+  <div class="col-12">
+    <div class="pd-30">
+      <h4 class="tx-gray-800 mg-b-5">Product</h4>
+      <p class="mg-b-0">You can edit the product area from here</p>
+    </div>
+
+    <div class="br-pagebody mg-t-5 pd-x-30">
+      <div class="row row-sm mg-t-20">
+        <div class="col-12">
+          <form class="form-layout form-layout-1" name="productForm">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label class="form-control-label">Product Name: <span class="tx-danger productNameError">*</span></label>
+                <input class="form-control" type="text" name="productName" placeholder="Enter the product name">
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label class="form-control-label">Product Company: <span class="tx-danger productCompanyError">*</span></label>
+                <select name="productCompany">
+                  <%companyData.forEach(function(company) {%>
+                  <%if(company.type == 'page'){%>
+                  <option value="<%=company.name%>"><%=company.name%></option>
+                  <%}%>
+                  <%})%>
+              </select>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 mg-b-25">
+              <label class="form-control-label">Product Front Image: <span class="tx-danger productFrontImageError">*</span></label>
+              <div class="upload">
+                <div class="uploadInfo">
+                  <span class="uploadFileName"><input type="file" name="productFrontImage"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 mg-b-25">
+              <label class="form-control-label">Product Back Image: <span class="tx-danger productBackImageError">*</span></label>
+              <div class="upload">
+                <div class="uploadInfo">
+                  <span class="uploadFileName"><input type="file" name="productBackImage"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <button class="btn btn-info submitProduct">Submit</button>
+              <button class="btn btn-secondary clearProduct">Clear Form</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12 productArea">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ########## END: CLIENTS CONTENT ########## -->
+
+  <%- include ('layout/footer') -%>

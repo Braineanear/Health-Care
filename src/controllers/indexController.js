@@ -8,6 +8,12 @@ exports.homePage = catchAsync(async (req, res) => {
   res.render('website/home', { title: 'Homepage', companyData });
 });
 
+exports.contactPage = catchAsync(async (req, res) => {
+  const companyData = await Company.find();
+
+  res.render('website/contact', { title: 'Contact Us', companyData });
+});
+
 exports.errorPage = (req, res) => res.render('error/404', { title: '404' });
 
 exports.productsPage = catchAsync(async (req, res) => {

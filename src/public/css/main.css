@@ -1376,7 +1376,8 @@ label {
 
 .contact i {
 	background: #8fb569;
-	font-size: 40px;
+	font-size: 50px;
+	padding: 15px;
 	height: 150px;
 	width: 150px;
 	color: #ffffff;
@@ -1435,11 +1436,10 @@ label {
 
 .form-box::before {
 	position: absolute;
-	content: "\f0e0";
-	font-family: "Font Awesome 5 Free";
+	font-family: "IcoFont";
 	font-weight: 700;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 20px;
 	text-align: center;
 	left: 45px;
 	color: #756563;
@@ -1447,20 +1447,30 @@ label {
 	z-index: 99;
 }
 
+.message-icon::before {
+	content: "\ef63";
+}
+
 .user-icon::before {
-  content: "\f007";
+  content: "\ec8e";
 }
 
 .email-icon::before {
-  content: "\f0e0";
+  content: "\ec56";
+}
+
+.company-icon .nice-select{
+	left: 40px;
+	position: relative;
+	width: 80%;
 }
 
 .phone-icon::before {
-  content: "\f095";
+  content: "\ef9b";
 }
 
 .subject-icon::before {
-  content: "\f0a6";
+  content: "\ef50";
 }
 
 .contact-form input::-moz-placeholder, .contact-form input::placeholder {

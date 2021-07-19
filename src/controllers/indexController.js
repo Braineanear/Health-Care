@@ -1,6 +1,13 @@
+const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
+
 const catchAsync = require('../utils/catchAsync');
 const Company = require('../models/companyModel');
 const Product = require('../models/productModel');
+
+dotenv.config({
+  path: 'config.env'
+});
 
 exports.homePage = catchAsync(async (req, res) => {
   const companyData = await Company.find();
@@ -38,5 +45,40 @@ exports.productPage = catchAsync(async (req, res) => {
     title: productData.name,
     productData,
     companyData
+  });
+});
+
+exports.contact = catchAsync(async (req, res) => {
+  const { name, email, phone, subject, company, message } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.SMTP_USERNAME,
+      pass: process.env.SMTP_PASSWORD
+    }
+  });
+
+  const text = `
+    name: ${name}
+    email: ${email}
+    phone: ${phone}
+    company: ${company}
+    subject: ${subject}
+    message: ${message}
+  `;
+
+  const mailOptions = {
+    to: process.env.EMAIL_FROM,
+    subject: subject,
+    text: text
+  };
+
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(info);
+    }
   });
 });

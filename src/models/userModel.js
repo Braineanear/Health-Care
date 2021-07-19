@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
     },
     avatarURL: {
       type: String,
-      default: null
+      default: 'https://img.icons8.com/bubbles/2x/admin-settings-male.png'
     },
     avatarPublicID: {
       type: String,

@@ -5,7 +5,8 @@ const {
   contactPage,
   errorPage,
   productsPage,
-  productPage
+  productPage,
+  contact
 } = require('../controllers/indexController.js');
 
 const {
@@ -20,7 +21,7 @@ const router = express.Router();
 router.route('/').get(homePage);
 router.route('/404').get(errorPage);
 router.route('/auth').get(authPage);
-router.route('/contact').get(contactPage);
+router.route('/contact').get(contactPage).post(contact);
 router.route('/products/:name').get(productsPage);
 router.route('/products/:company/:name').get(productPage);
 

@@ -170,6 +170,10 @@
     width: 20%;
   }
 
+  .productImage img{
+    height: 80vh;
+  }
+
   .hero-text.hero-text-2 {
     padding-top: 150px;
   }
@@ -638,9 +642,7 @@
     width: 100%;
     margin-bottom: 20px;
   }
-  .productImage img{
-    height: 60vh;
-  }
+
 }
 
 /* Large Mobile :480px. */
@@ -655,5 +657,8 @@
 
   .about-right-side {
     padding: 0 30px;
+  }
+  .productImage img{
+    height: 50vh;
   }
 }

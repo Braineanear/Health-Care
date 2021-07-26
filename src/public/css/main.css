@@ -1470,6 +1470,10 @@ label {
   content: "\ef9b";
 }
 
+.country-icon::before {
+	content: "\ef0e";
+}
+
 .subject-icon::before {
   content: "\ef50";
 }

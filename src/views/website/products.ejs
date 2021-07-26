@@ -1,17 +1,52 @@
 <%- include ('layout/header') -%>
 <!-- hero-area start -->
-<section class="breadcrumb-bg pt-200 pb-180" data-background="../img/page/page-bg.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 col-md-9">
-                <div class="page-title">
-                    <p class="small-text pb-15">We are here for your care.</p>
-                    <h1>Products Page</h1>
+<% if (productData[0].company === "Mera-Med") { %>
+    <section class="breadcrumb-bg pt-200 pb-180" data-background="../img/page/mera-med.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="page-title">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<% } else if (productData[0].company === 'Tri-V') {%>
+    <section class="breadcrumb-bg pt-200 pb-180" data-background="../img/page/tri-v.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="page-title">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<% } else if (productData[0].company === 'Zox') { %>
+    <section class="breadcrumb-bg pt-200 pb-180" data-background="../img/page/zox.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="page-title">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<% } else { %>
+    <section class="breadcrumb-bg pt-200 pb-180" data-background="../img/page/default.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="page-title">
+                        <p class="small-text pb-15">We are here for your care.</p>
+                        <h1>Products Page</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<% } %>
 <!-- hero-area end -->
 
 <!-- shop-banner-area start -->

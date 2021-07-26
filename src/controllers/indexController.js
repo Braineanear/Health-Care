@@ -49,7 +49,7 @@ exports.productPage = catchAsync(async (req, res) => {
 });
 
 exports.contact = catchAsync(async (req, res) => {
-  const { name, email, phone, subject, company, message } = req.body;
+  const { name, email, phone, subject, company, country, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -64,6 +64,7 @@ exports.contact = catchAsync(async (req, res) => {
     email: ${email}
     phone: ${phone}
     company: ${company}
+    country: ${country}
     subject: ${subject}
     message: ${message}
   `;

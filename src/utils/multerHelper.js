@@ -17,7 +17,7 @@ exports.multerUploads = (req, res, next) => {
       }
       console.log(err);
 
-      return res.redirect('/dashboard/sliderContent');
+      return res.redirect('/dashboard');
     }
     if (err) {
       console.log(`ERR: ${err}`);

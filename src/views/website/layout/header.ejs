@@ -71,9 +71,7 @@
                   <li><a href="#">Products +</a>
                     <ul class="submenu">
                       <%companyData.forEach(function(company){%>
-                      <%if(company.type == 'page') {%>
-                      <li><a href="<%=company.link%>"><%=company.name%></a></li>
-                      <%}%>
+                        <li><a href="<%=company.link%>"><%=company.name%></a></li>
                       <%})%>
                     </ul>
                   </li>
